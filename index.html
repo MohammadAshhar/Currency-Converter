@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currency Converter — Static (Calculate on click)</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <h1><i class="fa-solid fa-coins"></i> Currency Converter</h1>
+    </header>
+
+    <main>
+      <form id="converterForm" class="converter-form">
+        <label class="amount">
+          <span>Amount</span>
+          <input id="amount" name="amount" type="number" min="0" step="any" value="1" />
+        </label>
+
+        <div class="row dropdown-row">
+          <div class="select-card from">
+            <label>From</label>
+            <div class="select-inner">
+              <img src="https://flagsapi.com/US/flat/64.png" alt="flag" />
+              <select name="from" aria-label="From currency"></select>
+            </div>
+          </div>
+
+          <button id="swap" class="icon-btn" title="Swap currencies" aria-label="Swap">
+            <i class="fa-solid fa-right-left"></i>
+          </button>
+
+          <div class="select-card to">
+            <label>To</label>
+            <div class="select-inner">
+              <img src="https://flagsapi.com/IN/flat/64.png" alt="flag" />
+              <select name="to" aria-label="To currency"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="msg" role="status">Ready — choose currencies and click Calculate</div>
+
+        <div class="controls">
+          <button id="calculate" class="primary">Calculate</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <small>Made with Love ❤ by Mohammd Ashhar</small>
+    </footer>
+  </div>
+
+  <script src="codes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
